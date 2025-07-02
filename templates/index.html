@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sheikh Mursalin | Portfolio</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <!-- Icons (Hero Icons CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.js" defer></script>
+</head>
+<body>
+  <!-- ===== Sidebar ===== -->
+   <button id="openSidebar" class="icon-btn" aria-label="Open menu">
+  <i class="ti ti-menu-2"></i>
+    </button>
+  <aside id="sidebar">
+    <button id="closeSidebar" class="icon-btn"><i class="ti ti-x"></i></button>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- ===== Header (mobile burger) ===== -->
+  <header>
+    <div class="container header-flex">
+      <button id="openSidebar" class="icon-btn"><i class="ti ti-menu-2"></i></button>
+      <h1 class="logo">Mursalin</h1>
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <section id="home" class="hero">
+    <div class="container hero-content">
+      <img src="{{ url_for('static', filename='img/HD_Profile_Image.png') }}" alt="Mursalin" class="profile-img">
+      <h2>Hi, I'm Sheikh Mursalin</h2>
+      <p class="tagline">AI Developer • Python & DevOps Learner • LLM Explorer</p>
+      <a href="#contact" class="btn">Hire Me</a>
+    </div>
+  </section>
+
+  <!-- ===== About ===== -->
+  <section id="about" class="section">
+    <div class="container grid-2">
+      <div>
+        <h2 class="section-title">About Me</h2>
+        <p>
+          I’m a passionate developer learning AI, Python, Computer Vision,
+          NLP, and DevOps tools like Git & Docker. I’m working on impactful AI
+          projects and constantly improving my communication and problem‑solving skills.
+        </p>
+      </div>
+      <img src="{{ url_for('static', filename='HD_Profile_Image.png') }}" alt="Profile" class="about-img">
+    </div>
+  </section>
+
+  <!-- ===== Skills ===== -->
+  <section id="skills" class="section alt">
+    <div class="container">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-grid">
+        <span>Python</span><span>Flask & FastAPI</span><span>Machine Learning</span>
+        <span>NLP</span><span>Computer Vision</span><span>Docker</span>
+        <span>Git & GitHub</span><span>CI/CD</span><span>HTML & CSS</span><span>JavaScript</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Projects ===== -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <article class="project-card">
+          <img src="https://images.unsplash.com/photo-1573497161225-3f0c055b556b"
+               alt="Dog vs Cat" loading="lazy">
+          <div class="project-content">
+            <h3>Dog vs Cat Classification (DNN)</h3>
+            <p>Deep Neural Network to classify dog & cat images using TensorFlow & Keras.</p>
+            <a href="https://colab.research.google.com/drive/1KulTbrVPuR2BDL6w-Lp3naaFd13r64fb?usp=sharing" target="_blank">Code →</a>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card">
+          <img src="https://images.unsplash.com/photo-1581091012184-7abdbf0b7d2c"
+               alt="Gender Classification" loading="lazy">
+          <div class="project-content">
+            <h3>Gender Classification with CNN</h3>
+            <p>CNN model to classify gender from facial images (hosted on Kaggle).</p>
+            <a href="https://www.kaggle.com/code/sheikhmursalin/task-for-computervision" target="_blank">Code →</a>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card">
+          <img src="https://images.unsplash.com/photo-1682685796464-c6f35d59ddc2"
+               alt="LLM Knowledge Worker" loading="lazy">
+          <div class="project-content">
+            <h3>LLM Knowledge Worker</h3>
+            <p>LangChain‑powered app using OpenAI LLMs to automate knowledge work.</p>
+            <a href="https://github.com/sheikhmursalin/LLM-Powered-Knowledge-Worker" target="_blank">Code →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Contact / Enquiry Form ===== -->
+  <section id="contact" class="section alt">
+    <div class="container">
+      <h2 class="section-title">Enquiry / Contact Me</h2>
+
+      <form id="enquiryForm" class="contact-form">
+        <div class="form-group">
+          <label>Name</label>
+          <input type="text" id="name" required>
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" id="email" required>
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea id="message" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn">Send Enquiry</button>
+        <p id="formStatus" class="status-msg"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    © <span id="year"></span> Sheikh Mursalin. All rights reserved.
+  </footer>
+
+  <!-- JS -->
+  <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+</body>
+</html>
