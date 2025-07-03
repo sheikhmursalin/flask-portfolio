@@ -101,8 +101,8 @@
       <div class="projects-grid">
         <!-- Project 1 -->
         <article class="project-card">
-      <img src="{{ url_for('static', filename='img\project1.jpg') }}"
-               alt="Dog vs Cat" class="about-img">
+ <img src="{{ url_for('static', filename='img/project1.jpg') }}"
+     alt="Dog vs Cat" class="about-img">
           <div class="project-content">
             <h3>Dog vs Cat Classification (DNN)</h3>
             <p>Deep Neural Network to classify dog & cat images using TensorFlow & Keras.</p>
@@ -113,8 +113,8 @@
 
         <!-- Project 2 -->
         <article class="project-card">
-          <img src="https://images.unsplash.com/photo-1581091012184-7abdbf0b7d2c"
-               alt="Gender Classification" loading="lazy">
+          <img src="{{ url_for('static', filename='img/project2.webp') }}"
+               alt="Gender Classification" class="about-img">
           <div class="project-content">
             <h3>Gender Classification with CNN</h3>
             <p>CNN model to classify gender from facial images (hosted on Kaggle).</p>
@@ -125,8 +125,8 @@
 
         <!-- Project 3 -->
         <article class="project-card">
-          <img src="https://images.unsplash.com/photo-1682685796464-c6f35d59ddc2"
-               alt="LLM Knowledge Worker" loading="lazy">
+          <img src="{{ url_for('static', filename='img/project3.webp') }}"
+               alt="LLM Knowledge Worker"  class="about-img">
           <div class="project-content">
             <h3>LLM Knowledge Worker</h3>
             <p>LangChain‑powered app using OpenAI LLMs to automate knowledge work.</p>
