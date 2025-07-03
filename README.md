@@ -20,7 +20,7 @@ Live Deployment: [🔗 Render Link ](https://flask-portfolio-rfjb.onrender.com)
 
 ## 🖼️ Preview
 
-![screenshot](assest\Demo.png)
+![screenshot](assets/Demo.png)
 
 ---
 
